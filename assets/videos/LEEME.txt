@@ -1,0 +1,11 @@
+Guarda tus seis videos MP4 en esta carpeta con estos nombres:
+
+video-01.mp4  →  recuerdo 07
+video-02.mp4  →  recuerdo 08
+video-03.mp4  →  recuerdo 09
+video-04.mp4  →  recuerdo 10
+video-05.mp4  →  recuerdo 11
+video-06.mp4  →  recuerdo 12
+
+Para exportarlos, elige MP4 con video H.264 y audio AAC.
+Puedes editar sus títulos y descripciones en el bloque videos de contenido.js.

@@ -1,0 +1,3 @@
+Tu canción ya está incluida como cancion.mp3.
+Toca la nota musical de la página para reproducirla.
+Si cambias el nombre del archivo, actualiza la ruta en contenido.js usando barras /.

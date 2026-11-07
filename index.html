@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="description" content="Un pequeño lugar para guardar todo lo bonito de nosotros. Feliz aniversario, mi amor.">
+  <title>Nuestra historia · Feliz aniversario</title>
+  <link rel="icon" type="image/svg+xml" href="assets/corazon.svg">
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="contenido.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#historia">Ir a nuestros recuerdos</a>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="Volver al inicio">tú <span>&</span> yo<i aria-hidden="true">✳</i></a>
+    <nav aria-label="Secciones de nuestra historia">
+      <a href="#album">El álbum</a>
+      <a href="#carta">Para ti <span aria-hidden="true">↗</span></a>
+    </nav>
+    <button id="music-toggle" class="music-toggle" hidden type="button" aria-pressed="false" aria-label="Reproducir nuestra canción">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 17V5l11-2v12M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></svg>
+      <span>Nuestra canción</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-flower" aria-hidden="true">✳</span> UN PEQUEÑO REGALO PARA TI</p>
+        <h1 id="hero-title">De todas mis historias,<br>tú eres mi <em>favorita.</em></h1>
+        <p class="hero-description" id="hero-description">Hay momentos que quisiera guardar para siempre. Y casi todos tienen algo en común: estás tú.</p>
+        <a class="pill-button" href="#historia">Volver a lo bonito <span aria-hidden="true">↘</span></a>
+        <p class="hero-dedication" id="hero-dedication">Feliz aniversario, mi amor ♡</p>
+      </div>
+      <div class="hero-art" aria-label="Nuestras fotografías favoritas">
+        <svg class="hero-loop" viewBox="0 0 500 500" fill="none" aria-hidden="true"><path d="M38 315C-7 238 65 60 181 48s267 102 252 221S250 442 150 427 21 326 82 290s260 33 346-69" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 7"/></svg>
+        <figure class="polaroid polaroid-main">
+          <div class="tape" aria-hidden="true"></div>
+          <img id="cover-photo" src="assets/fotos/portada.jpeg" alt="Nuestra foto favorita juntos" width="800" height="1000" fetchpriority="high">
+          <figcaption id="cover-caption">mi lugar favorito eres tú.</figcaption>
+        </figure>
+        <figure class="polaroid polaroid-small">
+          <img id="detail-photo" src="assets/fotos/nosotros.jpeg" alt="Otro pequeño recuerdo de nosotros" width="800" height="1000">
+          <figcaption id="detail-caption">así, contigo.</figcaption>
+        </figure>
+        <div class="anniversary-seal" aria-hidden="true"><span>hecho de</span><svg viewBox="0 0 36 36"><path d="M18 29S3 20 3 11a8 8 0 0 1 15-3 8 8 0 0 1 15 3c0 9-15 18-15 18Z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg><span>nuestros días</span></div>
+        <span class="handwritten art-note">para volver aquí<br>siempre que quieras</span>
+        <svg class="art-arrow" viewBox="0 0 100 80" fill="none" aria-hidden="true"><path d="M90 8C95 65 45 65 16 44m0 0 21-2M16 44l9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <a class="scroll-note" href="#historia"><span aria-hidden="true">↓</span> hay mucho de nosotros aquí</a>
+    </section>
+
+    <div class="love-ribbon" aria-hidden="true"><span>los días se vuelven recuerdos</span><i>✳</i><span>y los recuerdos, nuestro hogar</span><i>✳</i></div>
+
+    <section class="intro-section section-shell" id="historia" aria-labelledby="intro-title">
+      <p class="eyebrow section-index">01 / LO NUESTRO</p>
+      <div class="intro-heading">
+        <h2 id="intro-title">Qué suerte<br><em>coincidir contigo.</em></h2>
+        <div class="intro-side">
+          <p id="intro-text">Si pudiera poner lo nuestro en una cajita, guardaría las risas, los abrazos y esas pequeñas cosas que solo entendemos tú y yo. Esta página se parece un poquito a eso.</p>
+          <div class="together-counter" id="together-counter" hidden aria-label="Tiempo que llevamos juntos">
+            <strong id="days-count"></strong><div><span>días de nosotros</span><small id="since-label"></small></div>
+          </div>
+        </div>
+      </div>
+      <div class="memory-timeline" id="memory-timeline"></div>
+    </section>
+
+    <section class="album-section" id="album" aria-labelledby="album-title">
+      <div class="section-shell">
+        <div class="section-topline"><p class="eyebrow section-index">02 / EL ÁLBUM</p><span class="handwritten">cosas que no quiero olvidar</span></div>
+        <div class="album-heading"><h2 id="album-title">Mis fotos favoritas<br>siempre tienen <em>algo de ti.</em></h2><p id="album-description">Unas cuantas fotos. Muchísimas razones para sonreír.<br><span>Toca una para verla más cerquita.</span></p></div>
+        <div class="photo-grid" id="photo-grid"></div>
+        <p class="album-footnote"><span aria-hidden="true">♡</span> Y todavía nos quedan tantas fotos por tomar.</p>
+      </div>
+    </section>
+
+    <section class="reasons-section section-shell" id="razones" aria-labelledby="reasons-title">
+      <div class="reasons-copy"><p class="eyebrow section-index">03 / LAS PEQUEÑAS COSAS</p><h2 id="reasons-title">Me gustas por<br>un montón de <em>razones.</em></h2><p>Algunas son enormes. Otras caben en una frase.<br>Quería dejarte unas cuantas por aquí.</p><svg class="doodle-flower" viewBox="0 0 120 160" fill="none" aria-hidden="true"><path d="M60 150V73M60 122C28 120 18 99 19 92c30-3 40 15 41 30Zm0-18c30-2 41-22 41-29-28-1-39 15-41 29Z" stroke="currentColor" stroke-width="1.2"/><path d="M60 64c-6 23-33 26-35 11-2-9 8-15 22-17-25-1-34-23-21-29 9-4 18 6 23 18-6-24 8-43 19-32 7 7 1 19-8 29 20-15 41-8 35 6-4 8-17 7-30 5 23 10 26 33 11 34-10 1-14-11-16-25Z" stroke="currentColor" stroke-width="1.4"/><circle cx="57" cy="55" r="7" stroke="currentColor" stroke-width="1.2"/></svg></div>
+      <div class="reason-card" id="reason-card"><span class="reason-number" id="reason-number">01</span><span class="reason-heart" aria-hidden="true">♡</span><blockquote id="reason-text" aria-live="polite" aria-atomic="true"></blockquote><p class="reason-signoff">y podría seguir…</p><button id="next-reason" class="text-button" type="button">Una razón más <span aria-hidden="true">↻</span></button></div>
+    </section>
+
+    <section class="letter-section" id="carta" aria-labelledby="letter-title">
+      <div class="letter-inner section-shell"><p class="eyebrow section-index">04 / SOLO PARA TI</p><h2 id="letter-title">Hay cosas que merecen<br><em>una carta.</em></h2><p id="letter-preview">Y tú mereces que te las diga todas.</p>
+        <button class="envelope-button" id="open-letter" type="button" aria-haspopup="dialog" aria-controls="letter-dialog">
+          <span class="envelope-back"></span><span class="envelope-note"><span class="handwritten">Para ti, mi amor</span><span>con todo lo que siento</span></span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="wax-seal" aria-hidden="true">♡</span><span class="envelope-label">Toca para abrir tu carta <span aria-hidden="true">↗</span></span>
+        </button>
+        <p class="letter-afterword" id="letter-afterword">Mi parte favorita de esta historia<br>es que todavía la estamos escribiendo.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer section-shell"><span class="wordmark">tú <span>&</span> yo<i aria-hidden="true">✳</i></span><p id="footer-text">Hecho con amor, para mi persona favorita.</p><a href="#inicio">Volver a empezar <span aria-hidden="true">↑</span></a></footer>
+  </main>
+
+  <dialog id="photo-dialog" class="photo-dialog" aria-label="Nuestro álbum de fotos">
+    <div class="lightbox-shell"><button class="dialog-close" id="close-photo" type="button" aria-label="Cerrar fotografía">×</button><figure><img id="lightbox-image" alt="" width="1000" height="1200"><figcaption><span id="lightbox-counter"></span><h3 id="lightbox-title"></h3><p id="lightbox-caption"></p></figcaption></figure><div class="lightbox-controls"><button id="previous-photo" type="button" aria-label="Ver foto anterior">←</button><span>nuestros pequeños eternos</span><button id="next-photo" type="button" aria-label="Ver foto siguiente">→</button></div></div>
+  </dialog>
+
+  <dialog id="video-dialog" class="photo-dialog video-dialog" aria-labelledby="video-title">
+    <div class="lightbox-shell">
+      <button class="dialog-close" id="close-video" type="button" aria-label="Cerrar video">×</button>
+      <figure>
+        <video id="video-player" controls playsinline preload="none" aria-labelledby="video-title"></video>
+        <p id="video-message" class="video-message" role="status" hidden></p>
+        <figcaption>
+          <span id="video-number" class="video-number"></span>
+          <h3 id="video-title"></h3>
+          <p id="video-caption"></p>
+        </figcaption>
+      </figure>
+    </div>
+  </dialog>
+
+  <dialog id="letter-dialog" class="letter-dialog" aria-labelledby="letter-salutation"><button class="dialog-close" id="close-letter" type="button" aria-label="Cerrar carta">×</button><article class="letter-paper"><span class="letter-mark" aria-hidden="true">♡</span><p class="eyebrow">PARA LEER DESPACITO</p><h2 id="letter-salutation"></h2><div class="letter-body" id="letter-body"></div><p class="letter-signature"><span id="letter-signoff"></span><strong class="handwritten" id="letter-signature"></strong></p><div class="letter-ending" aria-hidden="true">✳ &nbsp; ♡ &nbsp; ✳</div></article></dialog>
+
+  <div class="heart-confetti" id="heart-confetti" aria-hidden="true"></div>
+  <p id="status-message" class="sr-only" role="status"></p>
+  <noscript><p class="noscript-note">Activa JavaScript en tu navegador para descubrir el álbum y abrir tu carta.</p></noscript>
+</body>
+</html>
